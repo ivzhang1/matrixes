@@ -30,19 +30,23 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
+    new_mat = new_matrix(cols=len(m2))
     if(len(m1) != len(m2[0])):
         print("Cannot be multiplied")
     else:
-        for r in range(4):
-            
-    print_matrix(m2)
-               
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+                for k in range(len(m2)):
+                    new_mat[i][j] += m1[i][k] * m2[k][j]
+
+    return new_mat
+
 def new_matrix(rows = 4, cols = 4):
     m = []
-    counter = 0
+    #counter = 0
     for c in range( cols ):
         m.append( [] )
         for r in range( rows ):
-            m[c].append(counter )
-            counter+=1
+            m[c].append(0)
+            #counter+=1
     return m
