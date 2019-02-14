@@ -11,11 +11,7 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     add_point(matrix, x1, y1, z1)
 
 def add_point( matrix, x, y, z=0 ):
-    l = []
-    l.append(x)
-    l.append(y)
-    l.append(z)
-    l.append(1)
+    l = [x,y,z,1]
 
     matrix.append(l)
 
