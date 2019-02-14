@@ -5,7 +5,7 @@ from matrix import *
 screen = new_screen()
 color = [255, 0, 0]
 
-edges = new_matrix(4, 4);
+edges = new_matrix(0, 0);
 add_edge(edges, 250, 150, 0, 150, 250, 0);
 add_edge(edges, 250, 150, 0, 350, 250, 0);
 add_edge(edges, 150, 250, 0, 200, 320, 0);
